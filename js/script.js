@@ -1,4 +1,28 @@
+/**
+ * Chidere una parola all'utente
+ * verificare se la parola è palindroma
+ * stamapre il risultato
+ */ 
 
+var parolaUtente = prompt("Inserire una parola").toLowerCase();
+
+console.log( "la tua parola",  controlloPalindromo(parolaUtente));
+
+function controlloPalindromo(parola){
+    var parolaReverse = "";
+    
+    for( i = parola.length - 1; i >= 0; i-- ){
+        parolaReverse += parola[i];
+    }
+
+    if( parola === parolaReverse ){
+        var risultato = "è un palindromo"
+    }else{
+        var risultato = "non è un palindromo"
+    }
+
+    return risultato;
+}
 
 
 
